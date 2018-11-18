@@ -1,0 +1,10 @@
+.row {
+	display: inline-block;
+}
+
+.cell {
+	border: solid 1px black;
+	width: 50px;
+	display: inline-block;
+	text-align: center;
+}
