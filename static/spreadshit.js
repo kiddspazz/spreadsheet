@@ -46,16 +46,15 @@ class Spreadsheet extends React.Component {
 	}
 
 	render() {
+		let sheet = [];
 		for (let i = 0; i < numRows; i++) {
 			let thisRowCells = [];
 			for (let j = 0; j < numColumns; j++) {
 				thisRowCells[j] = {data: data[i * numColumns + j]}
 			}
-			console.log(thisRowCells)
-			return (
-				<Row className='row' cells={thisRowCells} />
-			)
+			sheet[i] = <div key={'div' + i}><Row className='row' cells={thisRowCells} key={'ROW' + i} /></div>;
 		}
+		return <div>{sheet}</div>
 	}
 }
 
